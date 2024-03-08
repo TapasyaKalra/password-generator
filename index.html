@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <h1>Password Generator</h1>
+        </div>
+        <div class="row mt-5">
+            <div class="input-group">
+                <input type="text" name="resultField" id="resultField" class="form-control" disabled>
+                <button class="btn btn-primary" type="button" id="copyButton" onclick='copyToClipboard()' ><i class="bi bi-clipboard " ></i></button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col border-end">
+                <div class="input-group">
+                    <div class="col-2">
+                        <input type="checkbox" name="uppercase" id="uppercase" class="form-check-input" checked>
+                    </div>
+                    <div class="col">
+                        <label for="uppercase">UPPERCASE</label>
+                    </div>
+                    
+                </div> 
+                <div class="input-group">
+                    <div class="col-2">
+                        <input type="checkbox" name="lowercase" id="lowercase" class="form-check-input">
+                    </div>
+                    <div class="col">
+                        <label for="lowercase">lowercase</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="col-2">
+                        <input type="checkbox" name="numeric" id="numeric" class="form-check-input">
+                    </div>
+                    <div class="col">
+                        <label for="numeric">Numeric (1-9)</label>
+                    </div>
+                </div>   
+                <div class="input-group">
+                    <div class="col-2">
+                        <input type="checkbox" name="symbols" id="symbols" class="form-check-input">
+                    </div>
+                    <div class="col">
+                        <label for="symbols">Symbols (!,@,#,$,%,_,.)</label>
+                    </div>
+                </div>       
+            </div>
+            <div class="col input-group ">
+                <div class="container-fluid">
+                    <div class="row justify-content-end">
+                        <div class="col-md-3">
+                            <label for="length">Length</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input class="w-100" type="range" name="lengthSlider" id="lengthSlider" min="10" max="50"  >
+                        </div>
+                    </div>
+                    <div class="row text-end">
+<!-- displaying chosen length here -->
+                        <span id="lengthSpan">30</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row mt-5">
+                <a name="generateButton" id="generateButton" class="btn btn-primary w-25 mx-auto btn-lg" href="#" role="button" onClick="generatePassword()">Generate</a>
+        </div>
+        <div class="row mt-5">
+            <a name="clearButton" id="clearButton" class="btn btn-primary w-25 mx-auto btn-lg" href="#" role="button" onClick="clearFields()">Clear</a>
+        </div>
+        
+    </div>
+    
+</body>
+<script src="script.js"></script>
+<script src="bootstrap/bootstrap.bundle.js"></script>
+</html>

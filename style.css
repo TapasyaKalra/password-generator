@@ -1,0 +1,45 @@
+body{
+    font-size: 1.5em;
+    background-color: rgb(240, 240, 240);
+}
+#resultField{
+    background-color: white;
+    outline:none;
+    border:none;
+    height:70px;
+    font-size: 25px;
+}
+.btn-primary, .form-check-input:checked{
+    background-color: rgb(4, 9, 97);
+    border:white;
+}
+.btn-primary:hover{
+    background-color: rgba(4, 9, 97, 0.817)!important;
+}
+input[type='range']{
+    -webkit-appearance: none;
+    appearance: none;
+    background:  rgb(4, 9, 97);
+    border-radius:10px;
+}
+#lengthSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 16px; /* Set a specific slider handle width */
+    height: 16px;/* Slider handle height */
+    background: rgb(240, 240, 240); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius:10px;
+  }  
+#copyButton{
+    width:10%
+}
+.bi-clipboard{
+    font-size: 1.3em;
+}
+@media (min-width:900px) {
+    .container{
+        max-width: 70%;
+    } 
+}
+
